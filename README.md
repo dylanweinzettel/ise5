@@ -1,4 +1,4 @@
-# Especificaciones
+## Especificaciones
 
 Los dos archivos sobre los que van a tener que trabajar son el `main.cpp` y el `libs/bmp180.cpp`. Van a encontrar el circuito ya armado en la carpeta `sch`. El algoritmo que desarrollen va a tener que:
 
@@ -39,7 +39,7 @@ Materia: Adquisición de Datos
 - Pueden usar `digitalRead(pin)` para leer el estado de los pines digitales. Tienen que pasar como argumento el pin que quieren, en este caso, los pines van del 8 al 15.
 - Recuerden que la unidad original de la convierten es siempre Pascales.
 
-# Como probar el código
+## Como probar el código
 
 Una vez que tengan todo listo, vayan a la terminal, asegúrense que apunte a la carpeta donde están trabajando y escriban:
 
