@@ -1,5 +1,18 @@
 ## Especificaciones
 
+Van a tener que trabajar sobre el `main.cpp` y el `libs/DHT.cpp`. El objetivo es armar un programa que haga una lectura del sensor y muestre en el LCD la temperatura en la primer fila en grados C y en la segunda fila la humedad en %.
+
+Para lograr eso, en el `DHT.cpp` van a tener que terminar dos funciones `ExtractTemperature` y `ExtractHumidity`. En ambos casos, lo que tienen que conseguir es la temperatura o al humedad a partir de dos variables parciales (`highTemperature` y `lowTemperature` para la temperatura y `highHumidity` y `lowHumidity` para la humedad), donde `high` es la parte entera de la variable y `low` la decimal. Estas funciones tienen que devolver ese valor.
+
+Ejemplo:
+
+```
+highTemeprature = 27 | lowTemperature = 10 => temperature = 27.10
+highHumidity = 73 | lowHumidity = 22 => humidity = 73.22
+```
+
+En el `main.cpp` tienen que hacer una lectura con `dht.read()` y mostrar los valores en el LCD con su valor correspondiente. 
+
 Luego de resolverlo, prueben el resultado y saquen screenshot de el circuito mostrando la presión en tres unidades distintas y armen un `README.md` con lo siguiente:
 
 ```
@@ -14,6 +27,13 @@ Materia: Adquisición de Datos
 
 ## Orientación
 
+- El `dht.read()` tiene dos argumentos que necesitamos pasarle, el primero es la variable para la temperatura y el segundo para la humedad. Para usarlo, tenemos que hacer algo como esto:
+
+```cpp
+float t, h;
+
+dht.read(&t, &h);
+```
 
 ## Como probar el código
 
